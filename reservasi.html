@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi - Hotel Nusantara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="LandingPage.html" class="logo">Hotel Nusantara</a>
+                <div class="nav-links">
+                    <a href="LandingPage.html">Beranda</a>
+                    <a href="reservasi.html">Reservasi</a>
+                    <a href="Login.html" class="btn-primary">Login</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="reservation-container">
+                <div class="card">
+                    <h2 class="section-title" style="text-align:left; margin-bottom: 2rem;">Buat Reservasi Baru</h2>
+                    <form action="#" method="POST">
+                        <div class="reservation-form-grid">
+                            <div class="form-group">
+                                <label for="nama_lengkap">Nama Lengkap</label>
+                                <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email_reservasi">Alamat Email</label>
+                                <input type="email" id="email_reservasi" name="email_reservasi" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkin">Tanggal Check-in</label>
+                                <input type="date" id="checkin" name="checkin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout">Tanggal Check-out</label>
+                                <input type="date" id="checkout" name="checkout" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipe_kamar">Tipe Kamar</label>
+                                <select id="tipe_kamar" name="tipe_kamar">
+                                    <option>Deluxe Room</option>
+                                    <option>Executive Suite</option>
+                                    <option>Presidential Suite</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="jumlah_tamu">Jumlah Tamu</label>
+                                <input type="number" id="jumlah_tamu" name="jumlah_tamu" min="1" max="4" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <button type="submit" class="btn-primary form-submit">Kirim Reservasi</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h2 class="section-title" style="text-align:left; margin-bottom: 2rem;">Riwayat Reservasi Anda</h2>
+                    <div class="table-wrapper">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Reservasi</th>
+                                    <th>Tgl Check-in</th>
+                                    <th>Tgl Check-out</th>
+                                    <th>Tipe Kamar</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HN-12345</td>
+                                    <td>2025-11-01</td>
+                                    <td>2025-11-03</td>
+                                    <td>Deluxe Room</td>
+                                    <td><span class="status status-confirmed">Dikonfirmasi</span></td>
+                                </tr>
+                                <tr>
+                                    <td>HN-12309</td>
+                                    <td>2025-09-15</td>
+                                    <td>2025-09-16</td>
+                                    <td>Executive Suite</td>
+                                    <td><span class="status status-completed">Selesai</span></td>
+                                </tr>
+                                <tr>
+                                    <td>HN-12250</td>
+                                    <td>2025-12-24</td>
+                                    <td>2025-12-26</td>
+                                    <td>Presidential Suite</td>
+                                    <td><span class="status status-pending">Menunggu</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Hotel Nusantara</h3>
+                    <p>Pengalaman menginap mewah dengan sentuhan kehangatan khas Indonesia.</p>
+                </div>
+                <div>
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="LandingPage.html">Beranda</a></li>
+                        <li><a href="reservasi.html">Reservasi</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Hubungi Kami</h3>
+                    <p>Jl. Pahlawan No. 123, Makassar</p>
+                    <p>Email: info@hotelnusantara.com</p>
+                    <p>Telp: (021) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hotel Nusantara. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

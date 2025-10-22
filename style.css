@@ -1,0 +1,394 @@
+/* Reset dan Pengaturan Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* Kontainer Utama */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-fullscreen {
+    position: relative;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    background-image: url(resource/lobi-hotel.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin:auto;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    margin: 0 auto 2rem auto;
+    text-shadow: 0;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.location-details h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.location-details p {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    border: 0;
+}
+
+
+
+/* Header dan Navigasi */
+header {
+    position: relative;
+    padding: 1.5rem 0;
+    z-index: 10;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.logo:hover {
+    color: #d97706; /* Oranye/Amber gelap saat hover */
+}
+
+.nav-links a {
+    color: #000000; /* Teks abu-abu sedang */
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: #d97706;
+}
+
+.btn-primary {
+    background-color: #f59e0b; /* Warna amber */
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #d97706;
+}
+
+/* ===== ATURAN KHUSUS UNTUK HEADER DI LANDING PAGE ===== */
+
+/* Mengatur ulang header di halaman hero agar mengambang */
+.hero-fullscreen header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Latar transparan di hero */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Border putih transparan di hero */
+}
+
+/* PERBAIKAN: Membuat teks logo menjadi putih di hero */
+.hero-fullscreen .logo {
+    color: #ffffff;
+}
+
+/* PERBAIKAN: Membuat teks link navigasi menjadi putih di hero */
+.hero-fullscreen .nav-links a {
+    color: #ffffff;
+}
+
+/* Memastikan tombol login tetap dengan gaya utamanya */
+.hero-fullscreen .nav-links a.btn-primary {
+    color: #ffffff;
+    background-color: #f59e0b;
+}
+
+/* Mengubah warna hover di hero agar terlihat */
+.hero-fullscreen .logo:hover,
+.hero-fullscreen .nav-links a:not(.btn-primary):hover {
+    color: #f59e0b; /* Warna amber saat hover */
+}
+
+/* ===== AKHIR ATURAN KHUSUS ===== */
+
+
+/* Utilitas Umum */
+.main-content {
+    padding: 3rem 0;
+}
+.section-title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Halaman Beranda (index.html) */
+.hero {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.hero-text {
+    flex: 1;
+    padding: 3rem;
+}
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.hero-text p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+.hero-image {
+    flex: 1;
+    display: block; /* <-- PERBAIKAN DI SINI: Pastikan gambar tampil di desktop */
+}
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.feature-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Formulir (Login & Reservasi) */
+.form-container {
+    max-width: 450px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db; /* Abu-abu cerah */
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.3);
+}
+.form-submit {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.form-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+.form-link a {
+    color: #d97706;
+    text-decoration: none;
+}
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+/* Halaman Reservasi */
+.reservation-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.reservation-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Tabel */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.styled-table thead {
+    background-color: #f9fafb; /* Latar header abu-abu sangat cerah */
+}
+.styled-table th, .styled-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb; /* Garis pemisah abu-abu */
+}
+.styled-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.status-confirmed {
+    background-color: #dcfce7;
+    color: #166534;
+}
+.status-completed {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+.status-pending {
+    background-color: #fef9c3;
+    color: #854d0e;
+}
+
+
+/* Footer */
+footer {
+    background-color: #1f2937;
+    color: #d1d5db; /* Teks abu-abu cerah */
+    margin-top: 3rem;
+    padding: 3rem 0;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.footer-grid h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+.footer-grid ul {
+    list-style: none;
+}
+.footer-grid ul li a {
+    color: #d1d5db;
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.3s ease;
+}
+.footer-grid ul li a:hover {
+    color: #ffffff;
+}
+.footer-bottom {
+    border-top: 1px solid #374151; /* Garis pemisah abu-abu gelap */
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    color: #9ca3af; /* Teks abu-abu agak gelap */
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+}
