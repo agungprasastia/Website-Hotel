@@ -137,7 +137,7 @@ header {
     background-color: #d97706;
 }
 
-/* ===== ATURAN KHUSUS UNTUK HEADER DI LANDING PAGE ===== */
+/* ATURAN KHUSUS UNTUK HEADER DI LANDING PAGE  */
 
 /* Mengatur ulang header di halaman hero agar mengambang */
 .hero-fullscreen header {
@@ -145,16 +145,16 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent; /* Latar transparan di hero */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Border putih transparan di hero */
+    background-color: transparent; /* Latar transparan */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Border putih transparan */
 }
 
-/* PERBAIKAN: Membuat teks logo menjadi putih di hero */
+/* PERBAIKAN: Membuat teks logo menjadi putih */
 .hero-fullscreen .logo {
     color: #ffffff;
 }
 
-/* PERBAIKAN: Membuat teks link navigasi menjadi putih di hero */
+/* PERBAIKAN: Membuat teks link navigasi menjadi putih */
 .hero-fullscreen .nav-links a {
     color: #ffffff;
 }
@@ -170,9 +170,6 @@ header {
 .hero-fullscreen .nav-links a:not(.btn-primary):hover {
     color: #f59e0b; /* Warna amber saat hover */
 }
-
-/* ===== AKHIR ATURAN KHUSUS ===== */
-
 
 /* Utilitas Umum */
 .main-content {
@@ -213,15 +210,6 @@ header {
 .hero-text p {
     color: #4b5563;
     margin-bottom: 1.5rem;
-}
-.hero-image {
-    flex: 1;
-    display: block; /* <-- PERBAIKAN DI SINI: Pastikan gambar tampil di desktop */
-}
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .features-grid {
@@ -287,6 +275,7 @@ header {
     font-weight: 600;
     cursor: pointer;
 }
+
 .form-link {
     text-align: center;
     margin-top: 1rem;
