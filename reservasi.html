@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservasi - Hotel Nusantara</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="LandingPage.html" class="logo">Hotel Nusantara</a>
+                <a href="index.html" class="logo">Hotel Nusantara</a>
                 <div class="nav-links">
-                    <a href="LandingPage.html">Beranda</a>
+                    <a href="index.html">Beranda</a>
                     <a href="reservasi.html">Reservasi</a>
                     <a href="Login.html" class="btn-primary">Login</a>
                 </div>
@@ -24,7 +24,7 @@
             <div class="reservation-container">
                 <div class="card">
                     <h2 class="section-title" style="text-align:left; margin-bottom: 2rem;">Buat Reservasi Baru</h2>
-                    <form action="#" method="POST">
+                    <form action="#" method="POST" id="reservationForm">
                         <div class="reservation-form-grid">
                             <div class="form-group">
                                 <label for="nama_lengkap">Nama Lengkap</label>
@@ -60,7 +60,6 @@
                         </div>
                     </form>
                 </div>
-
                 <div class="card">
                     <h2 class="section-title" style="text-align:left; margin-bottom: 2rem;">Riwayat Reservasi Anda</h2>
                     <div class="table-wrapper">
@@ -113,7 +112,7 @@
                 <div>
                     <h3>Tautan Cepat</h3>
                     <ul>
-                        <li><a href="LandingPage.html">Beranda</a></li>
+                        <li><a href="index.html">Beranda</a></li>
                         <li><a href="reservasi.html">Reservasi</a></li>
                         <li><a href="#">Tentang Kami</a></li>
                         <li><a href="#">Kontak</a></li>
@@ -131,5 +130,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
