@@ -22,7 +22,7 @@ body {
     color: #ffffff;
     height: 100vh;
     display: flex;
-    background-image: url('.../images/lobi-hotel.jpg');
+    background-image: url('../images/lobi-hotel.jpg');
     background-size: cover;
     background-position: center;
 }
